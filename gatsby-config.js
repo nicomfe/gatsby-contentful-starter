@@ -1,5 +1,6 @@
 const pixrem = require('pixrem')
 const autoprefixer = require('autoprefixer')
+const config = require('./deployhq.config')
 
 module.exports = {
   siteMetadata: {
@@ -30,8 +31,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: process.env.HYPE_CONTENTFUL_SPACE,
-        accessToken: process.env.HYPE_CONTENTFUL_ACCESS_TOKEN,
+        spaceId: config.CONTENTFUL_SPACE_ID,
+        accessToken: config.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     'gatsby-plugin-sharp',

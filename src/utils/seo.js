@@ -1,0 +1,15 @@
+export const commonTags = (ogTitle, ogDescription, ogKeywords, ogImage, themeColor) => ([
+  { name: 'title', content: ogTitle },
+  { name: 'description', content: ogDescription },
+  { name: 'og:description', content: ogDescription },
+  { name: 'og:image', content: ogImage ? ogImage.file.url : '' },
+  { name: 'og:image:secure_url', content: ogImage ? `https:${ogImage.file.url}` : '' },
+  { name: 'og:image:width', content: ogImage ? ogImage.file.details.image.width : 0 },
+  { name: 'og:image:height', content: ogImage ? ogImage.file.details.image.height : 0 },
+  { name: 'og:image:height', content: ogImage ? ogImage.file.details.image.height : 0 },
+  { name: 'og:image:type', content: ogImage ? ogImage.file.contentType : '' },
+  { name: 'og:image:alt', content: ogImage ? ogImage.description : '' },
+  { name: 'keywords', content: ogKeywords },
+  { name: 'msapplication-TileColor', content: themeColor },
+  { name: 'theme-color', content: themeColor },
+])

@@ -3,6 +3,7 @@
 
 1. Airbnb eslint
 2. SCSS with some postprocessors (autoprefixer and pixrem)
+3. Contentful
 
 -------------------
 

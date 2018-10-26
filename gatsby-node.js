@@ -17,15 +17,19 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then((result) => {
       const pages = result.data.allContentfulPage.edges
-      pages.map(({ node }) => (
+      pages.forEach(({ node }) => {
+        let templatePage = './src/templates/page.js'
+        if (node.slug === '/') {
+          templatePage = './src/templates/home.js'
+        }
         createPage({
-          path: `${node.slug}/`,
-          component: path.resolve('./src/templates/page.js'),
+          path: node.slug,
+          component: path.resolve(templatePage),
           context: {
             slug: node.slug,
           },
         })
-      ))
+      })
       resolve()
     })
   })

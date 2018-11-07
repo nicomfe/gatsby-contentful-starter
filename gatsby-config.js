@@ -5,6 +5,7 @@ const config = require('./deployhq.config')
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
+    siteUrl: 'https://defaultstarter.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -49,5 +50,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap',
   ],
 }

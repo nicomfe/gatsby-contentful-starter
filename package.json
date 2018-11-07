@@ -40,6 +40,7 @@
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-styled-components-config": "0.0.2",
+    "gatsby-plugin-sitemap": "2.0.2",
     "pixrem": "4.0.1",
     "prettier": "^1.14.2"
   },
